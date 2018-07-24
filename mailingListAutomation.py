@@ -47,9 +47,9 @@ email_list_clean = [email.strip(' ') for email in email_list_dirty]
 email_list_clean = [email.strip(',') for email in email_list_dirty]
 email_list_clean = [email.strip(';') for email in email_list_dirty]
 
-################################
-## AUTHENTICATE INTO MAILWAVE ##
-################################
+############################
+## AUTHENTICATE INTO FORM ##
+############################
 
 browser = webdriver.Chrome(chromedriver)
 browser.get(mailwave_url)
@@ -60,9 +60,9 @@ login_element.send_keys(Keys.ENTER)
 
 time.sleep(20)
 
-################################
-## ENTER EMAILS INTO MAILWAVE ##
-################################
+############################
+## ENTER EMAILS INTO FORM ##
+############################
 
 input_element = browser.find_element_by_css_selector('input.form-control.ng-untouched.ng-pristine.ng-valid')
 input_element.click()
